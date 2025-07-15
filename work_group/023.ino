@@ -1,7 +1,7 @@
-#define LED_BUILTIN 2 // ประกาศตัวแปรledที่ขาที่13
+#define LED_BUILTIN 2 // ประกาศตัวแปรledที่ขาที่2
 
 void setup() {
-  pinMode(LED_BUILTIN, OUTPUT); //กำหนดให้ขาพินที่13ส่งสัญญาณ
+  pinMode(LED_BUILTIN, OUTPUT); //กำหนดให้ขาพินที่2ส่งสัญญาณ
   Serial.begin(9600);
   Serial.println("พิมพ์ 1 เพื่อปิด LED");//แสดงข้อความขึ้นบรรทัดใหม่
   Serial.println("พิมพ์ 2 เพื่อเปิด LED");//แสดงข้อความขึ้นบรรทัดใหม่
@@ -16,17 +16,17 @@ void loop() {
    
     
     if (num == 1) { //ตรวจสอบถ้า numมีค่าเท่ากับ1
-      digitalWrite(LED_BUILTIN, 0); //สั่งให้ขาที่13ส่งสัญญาณออกมาโดยไม่โดยไม่จ่ายไฟ
+      digitalWrite(LED_BUILTIN, 0); //สั่งให้ขาที่2ส่งสัญญาณออกมาโดยไม่โดยไม่จ่ายไฟ
       Serial.println("LED ถูกปิดแล้ว"); //แสดงข้อความ
     } else if (num == 2) { //ตรวจสอบถ้า numมีค่าเท่ากับ2
-      digitalWrite(LED_BUILTIN, 1); //สั่งให้ขาที่13ส่งสัญญาณออกมาโดยจ่ายไฟออก
+      digitalWrite(LED_BUILTIN, 1); //สั่งให้ขาที่2ส่งสัญญาณออกมาโดยจ่ายไฟออก
       Serial.println("LED ถูกเปิดแล้ว"); //แสดงข้อความ
     } else if (num == 3) { //ตรวจสอบถ้า numมีค่าเท่ากับ3
       Serial.println("LED กำลังกระพริบ 5 ครั้ง"); //แสดงข้อความ
       for (int i = 0; i < 5; i++) { // พอเข้าเงื่อนไขเลข3 สั่งให้ทำลูปนี้5ครั้ง
-        digitalWrite(LED_BUILTIN, 1); //สั่งให้ขาที่13ส่งสัญญาณออกมาโดยจ่ายไฟออก
+        digitalWrite(LED_BUILTIN, 1); //สั่งให้ขาที่2ส่งสัญญาณออกมาโดยจ่ายไฟออก
         delay(300); //หน่วงเวลา
-        digitalWrite(LED_BUILTIN, 0);//สั่งให้ขาที่13ส่งสัญญาณออกมาโดยไม่โดยไม่จ่ายไฟ
+        digitalWrite(LED_BUILTIN, 0);//สั่งให้ขาที่2ส่งสัญญาณออกมาโดยไม่โดยไม่จ่ายไฟ
         delay(300);//หน่วงเวลา
       }
     } else {
